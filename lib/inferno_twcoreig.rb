@@ -25,6 +25,7 @@ require_relative 'inferno_twcoreig/patient_group'
 require_relative 'inferno_twcoreig/practitioner_group'
 require_relative 'inferno_twcoreig/practitionerRole_group'
 require_relative 'inferno_twcoreig/procedure_group'
+require_relative 'inferno_twcoreig/provenance_group'
 require_relative 'inferno_twcoreig/specimen_group'
 require_relative 'inferno_twcoreig/'
 
@@ -128,6 +129,7 @@ module InfernoTWCoreIG
       group from: :practitioner_group
       group from: :practitionerRole_group
       group from: :procedure_group
+      group from: :provenance_group
       group from: :specimen_group
     end
   end
