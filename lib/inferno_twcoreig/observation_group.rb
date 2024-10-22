@@ -1,6 +1,6 @@
 module InfernoTWCoreIG
   class ObservationGroup < Inferno::TestGroup
-    title 'Observation(檢驗檢查&生命體徵-血壓&身體質量指數) Tests'
+    title 'Observation(觀察的測量結果) Tests'
     description 'Verify that the server makes Observation resources available'
     id :observation_group
 
@@ -16,8 +16,14 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
-        )
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
+      )
 
       input :observation_id,
         title: 'Observation _id'
@@ -43,8 +49,14 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
-        )
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
+      )
 
       input :observation_category,
         title: 'Observation category'
@@ -67,8 +79,14 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
-        )
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
+      )
 
       input :observation_code,
         title: 'Observation code'
@@ -91,8 +109,14 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
-        )
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
+      )
 
       input :observation_performer,
         title: 'Observation performer'
@@ -115,8 +139,14 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
-        )
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
+      )
 
       input :observation_status,
         title: 'Observation status'
@@ -139,8 +169,14 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
-        )
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
+      )
 
       input :observation_subject,
         title: 'Observation subject'
@@ -163,8 +199,14 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
-        )
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
+      )
 
       input :observation_date,
         title: 'Observation date'
@@ -189,7 +231,13 @@ module InfernoTWCoreIG
         
         * Validating a FHIR Resource.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
       # This test will use the response from the :observation request in the
       # previous test
@@ -214,7 +262,13 @@ module InfernoTWCoreIG
         
         * Validating a FHIR Resource.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
       input :observation_resource,
             title: 'Observation Resource'
@@ -238,7 +292,13 @@ module InfernoTWCoreIG
       description %(
         Send a input Observation resource to a FHIR server database.
 
-        [臺灣核心-檢驗檢查&生命體徵-血壓&身體質量指數（TW Core Observation）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Observation-laboratoryResult-twcore.html)
+        [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
+
+        [臺灣核心-生命體徵（TW Core Observation Vital Signs）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)
+
+        [臺灣核心-血壓（TW Core Observation Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)
+
+        [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
 
       input :observation_resource,
