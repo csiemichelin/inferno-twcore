@@ -465,7 +465,7 @@ module InfernoTWCoreIG
 
     # 建議應該（SHOULD） 支援透過查詢參數 patient 、 category 及 status 查詢所有Observation：
     test do
-      title '[GET] Server returns valid results for Observation search by patientpatient, category and status'
+      title '[GET] Server returns valid results for Observation search by patient, category and status'
       description %(
         A server SHALL support searching by patient, category and status on the Observation resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
 
@@ -531,7 +531,7 @@ module InfernoTWCoreIG
 
     # 建議應該（SHOULD） 支援透過查詢參數 patient 、 category 及 _lastUpdated 查詢所有Observation：
     test do
-      title '[GET] Server returns valid results for Observation search by patientpatient, _lastUpdated and status'
+      title '[GET] Server returns valid results for Observation search by patient, _lastUpdated and status'
       description %(
         A server SHALL support searching by patient, _lastUpdated and status on the Observation resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
 
@@ -597,7 +597,7 @@ module InfernoTWCoreIG
 
     # 建議應該（SHOULD） 支援透過查詢參數 patient 、 code 及 date 查詢所有Observation：
     test do
-      title '[GET] Server returns valid results for Observation search by patientpatient, code and date'
+      title '[GET] Server returns valid results for Observation search by patient, code and date'
       description %(
         A server SHALL support searching by patient, code and date on the Observation resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
 

@@ -31,7 +31,7 @@ require_relative 'inferno_twcoreig/'
 module InfernoTWCoreIG
   class Suite < Inferno::TestSuite
     id :inferno_twcoreig_test_suite
-    title 'TW Core v0.2.2'
+    title 'TW Core v0.3.0'
     description 'TW Core FHIR API'
 
     # These inputs will be available to all tests in this suite
