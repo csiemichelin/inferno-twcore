@@ -41,7 +41,7 @@ module InfernoTWCoreIG
         title '[GET] Server returns valid results for CarePlan search by patient, category and date'
         description %(
           A server SHALL support searching by patient, category and date on the CarePlan resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
-  
+
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
         )
   
@@ -67,7 +67,7 @@ module InfernoTWCoreIG
         title '[GET] Server returns valid results for CarePlan search by patient, category and status'
         description %(
           A server SHALL support searching by patient, category and status on the CarePlan resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
-  
+
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
         )
   
@@ -93,7 +93,7 @@ module InfernoTWCoreIG
         title '[GET] Server returns valid results for CarePlan search by patient, category, status and date'
         description %(
           A server SHALL support searching by patient, category, status and date on the CarePlan resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
-  
+
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
         )
   
@@ -128,7 +128,7 @@ module InfernoTWCoreIG
           * Verifying that a string is valid JSON.
           
           * Validating a FHIR Resource.
-  
+
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
         )
         # This test will use the response from the :carePlan request in the
@@ -153,7 +153,7 @@ module InfernoTWCoreIG
           * Verifying that a string is valid JSON.
           
           * Validating a FHIR Resource.
-  
+
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
         )
         input :carePlan_resource,
@@ -177,7 +177,7 @@ module InfernoTWCoreIG
         title '[POST] Send CarePlan Resource to FHIR Server'
         description %(
           Send a input Transaction CarePlan(Support multiple Resource verification) to a FHIR server database.
-  
+ 
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
         )
   
