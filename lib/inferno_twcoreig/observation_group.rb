@@ -4,7 +4,7 @@ module InfernoTWCoreIG
     description 'Verify that the server makes Observation resources available'
     id :observation_group
 
-    input_order :url, :observation_id, :observation_category, :observation_code, :observation_performer, :observation_status, :observation_subject, :observation_date, :observation_patient, :observation_category, :observation_code, :observation_date, :observation_status, :observation_lastUpdated, :observation_resource
+    input_order :url, :observation_id, :observation_category, :observation_code, :observation_performer, :observation_status, :observation_subject, :observation_date, :observation_patient, :observation_lastUpdated, :observation_resource
 
     # 建議應該（SHOULD） 支援透過查詢參數 _id 查詢所有Observation：
     test do
