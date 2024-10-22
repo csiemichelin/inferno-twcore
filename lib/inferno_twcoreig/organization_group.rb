@@ -1,6 +1,6 @@
 module InfernoTWCoreIG
   class OrganizationGroup < Inferno::TestGroup
-    title 'Organization(機構-政府機構&醫事機構&公司行號) Tests'
+    title 'Organization(機構) Tests'
     description 'Verify that the server makes Organization resources available'
     id :organization_group
 
@@ -16,7 +16,13 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
+        [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
+
+        [臺灣核心-政府機構（TW Core Organization Government）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-govt-twcore.html)
+
+        [臺灣核心-醫事機構（TW Core Organization Hospital Department）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-hosp-twcore.html)
+
+        [臺灣核心-公司行號（TW Core Organization Company）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-co-twcore.html)
       )
 
       input_order :url
@@ -45,7 +51,13 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
+        [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
+
+        [臺灣核心-政府機構（TW Core Organization Government）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-govt-twcore.html)
+
+        [臺灣核心-醫事機構（TW Core Organization Hospital Department）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-hosp-twcore.html)
+
+        [臺灣核心-公司行號（TW Core Organization Company）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-co-twcore.html)
       )
 
       input_order :url
@@ -71,7 +83,13 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
+        [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
+
+        [臺灣核心-政府機構（TW Core Organization Government）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-govt-twcore.html)
+
+        [臺灣核心-醫事機構（TW Core Organization Hospital Department）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-hosp-twcore.html)
+
+        [臺灣核心-公司行號（TW Core Organization Company）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-co-twcore.html)
       )
 
       input_order :url
@@ -97,7 +115,13 @@ module InfernoTWCoreIG
 
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
+        [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
+
+        [臺灣核心-政府機構（TW Core Organization Government）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-govt-twcore.html)
+
+        [臺灣核心-醫事機構（TW Core Organization Hospital Department）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-hosp-twcore.html)
+
+        [臺灣核心-公司行號（TW Core Organization Company）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-co-twcore.html)
       )
 
       input_order :url
@@ -125,7 +149,13 @@ module InfernoTWCoreIG
         
         * Validating a FHIR Resource.
 
-        [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
+        [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
+
+        [臺灣核心-政府機構（TW Core Organization Government）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-govt-twcore.html)
+
+        [臺灣核心-醫事機構（TW Core Organization Hospital Department）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-hosp-twcore.html)
+
+        [臺灣核心-公司行號（TW Core Organization Company）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-co-twcore.html)
       )
       # This test will use the response from the :organization request in the
       # previous test
@@ -150,7 +180,13 @@ module InfernoTWCoreIG
         
         * Validating a FHIR Resource.
 
-        [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
+        [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
+
+        [臺灣核心-政府機構（TW Core Organization Government）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-govt-twcore.html)
+
+        [臺灣核心-醫事機構（TW Core Organization Hospital Department）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-hosp-twcore.html)
+
+        [臺灣核心-公司行號（TW Core Organization Company）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-co-twcore.html)
       )
 
       input_order :url
@@ -177,7 +213,13 @@ module InfernoTWCoreIG
       description %(
         Send a input Organization resource to a FHIR server database.
 
-        [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
+        [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
+
+        [臺灣核心-政府機構（TW Core Organization Government）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-govt-twcore.html)
+
+        [臺灣核心-醫事機構（TW Core Organization Hospital Department）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-hosp-twcore.html)
+
+        [臺灣核心-公司行號（TW Core Organization Company）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-co-twcore.html)
       )
 
       input_order :url
