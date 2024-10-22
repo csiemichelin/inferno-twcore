@@ -25,6 +25,8 @@ module InfernoTWCoreIG
         [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
 
+      input_order :url
+      
       input :observation_id,
         title: 'Observation _id'
 
