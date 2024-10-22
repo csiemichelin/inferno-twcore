@@ -103,12 +103,18 @@ module InfernoTWCoreIG
       # using their id
       group from: :allergyIntolerance_group
       group from: :bundle_group
+      group from: :careplan_group
+      group from: :careteam_group
       group from: :composition_group
       group from: :condition_group
+      group from: :coverage_group
+      group from: :device_group
       group from: :diagnosticReport_group
       group from: :documentReference_group
       group from: :encounter_group
+      group from: :goal_group
       group from: :imagingStudy_group
+      group from: :immunization_group
       group from: :location_group
       group from: :media_group
       group from: :medication_group
