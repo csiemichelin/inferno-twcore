@@ -4,7 +4,7 @@ module InfernoTWCoreIG
     description 'Verify that the server makes MessageHeader resources available'
     id :messageHeader_group
 
-    input_order :url, :messageHeader_id, :messageHeader_author, :messageHeader_sender, messageHeader_resource
+    input_order :url, :messageHeader_id, :messageHeader_author, :messageHeader_sender, :messageHeader_resource
 
     # 建議應該（SHOULD） 支援透過查詢參數 _id 查詢所有MessageHeader：
     test do
