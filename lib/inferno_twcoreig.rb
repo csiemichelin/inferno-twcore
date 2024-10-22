@@ -1,11 +1,17 @@
 require_relative 'inferno_twcoreig/allergyIntolerance_group'
 require_relative 'inferno_twcoreig/bundle_group'
+require_relative 'inferno_twcoreig/careplan_group'
+require_relative 'inferno_twcoreig/careteam_group'
 require_relative 'inferno_twcoreig/composition_group'
 require_relative 'inferno_twcoreig/condition_group'
+require_relative 'inferno_twcoreig/coverage_group'
+require_relative 'inferno_twcoreig/device_group'
 require_relative 'inferno_twcoreig/diagnosticReport_group'
 require_relative 'inferno_twcoreig/documentReference_group'
 require_relative 'inferno_twcoreig/encounter_group'
+require_relative 'inferno_twcoreig/goal_group'
 require_relative 'inferno_twcoreig/imagingStudy_group'
+require_relative 'inferno_twcoreig/immunization_group'
 require_relative 'inferno_twcoreig/location_group'
 require_relative 'inferno_twcoreig/media_group'
 require_relative 'inferno_twcoreig/medication_group'
@@ -20,6 +26,7 @@ require_relative 'inferno_twcoreig/practitioner_group'
 require_relative 'inferno_twcoreig/practitionerRole_group'
 require_relative 'inferno_twcoreig/procedure_group'
 require_relative 'inferno_twcoreig/specimen_group'
+require_relative 'inferno_twcoreig/'
 
 module InfernoTWCoreIG
   class Suite < Inferno::TestSuite
@@ -29,12 +36,12 @@ module InfernoTWCoreIG
 
     # These inputs will be available to all tests in this suite
     input :url,
-          title: 'FHIR Server Base Url'
+      title: 'FHIR Server Base Url'
 
-    input :credentials,
-          title: 'OAuth Credentials',
-          type: :oauth_credentials,
-          optional: true
+    # input :credentials,
+    #       title: 'OAuth Credentials',
+    #       type: :oauth_credentials,
+    #       optional: true
 
     # All FHIR requests in this suite will use this FHIR client
     fhir_client do

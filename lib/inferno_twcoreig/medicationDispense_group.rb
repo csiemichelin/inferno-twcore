@@ -4,6 +4,8 @@ module InfernoTWCoreIG
     description 'Verify that the server makes MedicationDispense resources available'
     id :medicationDispense_group
 
+    input_order :url, :medicationDispense_id, :medicationDispense_status, :medicationDispense_subject, :medicationDispense_medication, :medicationDispense_resource
+
     # 建議應該（SHOULD） 支援透過查詢參數 _id 查詢所有MedicationDispense：
     test do
       title '[GET] Server returns valid results for MedicationDispense search by _id'
@@ -12,19 +14,19 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
         )
 
-      input :location_id,
+      input :medicationDispense_id,
         title: 'MedicationDispense _id'
 
       # Named requests can be used by other tests
-      makes_request :location
+      makes_request :medicationDispense
 
       run do
-        fhir_search('MedicationDispense', params: { _id: location_id }, name: :location)
+        fhir_search('MedicationDispense', params: { _id: medicationDispense_id }, name: :medicationDispense)
 
         assert_response_status(200)
         assert_resource_type('Bundle')
@@ -39,16 +41,16 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
         )
 
-      input :location_status,
+      input :medicationDispense_status,
         title: 'MedicationDispense status'
 
       run do
-        fhir_search('MedicationDispense', params: { status: location_status })
+        fhir_search('MedicationDispense', params: { status: medicationDispense_status })
 
         assert_response_status(200)
         assert_resource_type('Bundle')
@@ -63,16 +65,16 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
         )
 
-      input :location_subject,
+      input :medicationDispense_subject,
         title: 'MedicationDispense subject'
 
       run do
-        fhir_search('MedicationDispense', params: { subject: location_subject })
+        fhir_search('MedicationDispense', params: { subject: medicationDispense_subject })
 
         assert_response_status(200)
         assert_resource_type('Bundle')
@@ -87,16 +89,16 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
         )
 
-      input :location_medication,
+      input :medicationDispense_medication,
         title: 'MedicationDispense medication'
 
       run do
-        fhir_search('MedicationDispense', params: { medication: location_medication })
+        fhir_search('MedicationDispense', params: { medication: medicationDispense_medication })
 
         assert_response_status(200)
         assert_resource_type('Bundle')
@@ -117,9 +119,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
       )
-      # This test will use the response from the :location request in the
+      # This test will use the response from the :medicationDispense request in the
       # previous test
-      uses_request :location
+      uses_request :medicationDispense
 
       run do
         assert_response_status(200)
@@ -142,18 +144,18 @@ module InfernoTWCoreIG
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
       )
-      input :location_resource,
+      input :medicationDispense_resource,
             title: 'MedicationDispense Resource'
       
-      output :location_value
+      output :medicationDispense_value
       
       run do 
-        assert_valid_json(location_resource) # For safety
-        resource_hash = JSON.parse(location_resource)
-        location_resource = FHIR::MedicationDispense.new(resource_hash)
-        # output location_value: location_resource
-        assert_valid_resource(resource: location_resource)
-        # if resource_is_valid?(resource: location_resource)
+        assert_valid_json(medicationDispense_resource) # For safety
+        resource_hash = JSON.parse(medicationDispense_resource)
+        medicationDispense_resource = FHIR::MedicationDispense.new(resource_hash)
+        # output medicationDispense_value: medicationDispense_resource
+        assert_valid_resource(resource: medicationDispense_resource)
+        # if resource_is_valid?(resource: medicationDispense_resource)
         # end
       end 
     end 
@@ -167,11 +169,11 @@ module InfernoTWCoreIG
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
       )
 
-      input :location_resource,
+      input :medicationDispense_resource,
             title: 'MedicationDispense Resource'
 
       run do 
-        resource_hash = JSON.parse(location_resource)
+        resource_hash = JSON.parse(medicationDispense_resource)
         response = fhir_create FHIR::MedicationDispense.new(resource_hash)
         assert response.status == 201
       end

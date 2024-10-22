@@ -4,6 +4,8 @@ module InfernoTWCoreIG
     description 'Verify that the server makes Procedure resources available'
     id :procedure_group
 
+    input_order :url, :procedure_id, :procedure_code, :procedure_status, :procedure_subject, :procedure_date, :procedure_resource
+
     # 建議應該（SHOULD） 支援透過查詢參數 _id 查詢所有Procedure：
     test do
       title '[GET] Server returns valid results for Procedure search by _id'
@@ -12,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
         )
@@ -39,7 +41,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
         )
@@ -63,7 +65,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
         )
@@ -87,7 +89,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
         )
@@ -111,7 +113,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
         )

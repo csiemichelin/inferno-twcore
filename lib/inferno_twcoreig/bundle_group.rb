@@ -1,17 +1,10 @@
 module InfernoTWCoreIG
   class BundleGroup < Inferno::TestGroup
-    title 'Bundle(資料交換基本單位-文件&信息) Tests'
+    title 'Bundle(資料交換基本單位) Tests'
     description 'Verify that the server makes Bundle resources available'
     id :bundle_group
 
-    # Define inputs here to ensure the correct order
-    input :url,
-    title: 'FHIR Server Base Url'
-      
-    input :credentials,
-    title: 'OAuth Credentials',
-    type: :oauth_credentials,
-    optional: true
+    input_order :url, :bundle_id, :bundle_identifier, :bundle_resource
 
     # 建議應該（SHOULD） 支援透過查詢參數 _id 查詢所有Bundle：
     test do
@@ -21,9 +14,11 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
-        [臺灣核心-資料交換基本單位-文件&信息（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位-文件（TW Core Bundle Document）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-document-twcore.html)
+        [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
         )
 
       input :bundle_id,
@@ -46,7 +41,9 @@ module InfernoTWCoreIG
       description %(
         A server SHALL support searching by identifier on the Bundle resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
 
-        [臺灣核心-資料交換基本單位-文件&信息（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位-文件（TW Core Bundle Document）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-document-twcore.html)
+        [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
         )
 
       input :bundle_identifier,
@@ -72,7 +69,9 @@ module InfernoTWCoreIG
         
         * Validating a FHIR Resource.
 
-        [臺灣核心-資料交換基本單位-文件&信息（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位-文件（TW Core Bundle Document）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-document-twcore.html)
+        [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
       )
       # This test will use the response from the :bundle request in the
       # previous test
@@ -97,7 +96,9 @@ module InfernoTWCoreIG
         
         * Validating a FHIR Resource.
 
-        [臺灣核心-資料交換基本單位-文件&信息（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位-文件（TW Core Bundle Document）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-document-twcore.html)
+        [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
       )
       input :bundle_resource,
             title: 'Bundle Resource'
@@ -121,7 +122,9 @@ module InfernoTWCoreIG
       description %(
         Send a input Transaction Bundle(Support multiple Resource verification) to a FHIR server database.
 
-        [臺灣核心-資料交換基本單位-文件&信息（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
+        [臺灣核心-資料交換基本單位-文件（TW Core Bundle Document）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-document-twcore.html)
+        [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
       )
 
       input :bundle_resource,

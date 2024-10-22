@@ -4,14 +4,7 @@ module InfernoTWCoreIG
     description 'Verify that the server makes Composition resources available'
     id :composition_group
 
-    # Define inputs here to ensure the correct order
-    input :url,
-    title: 'FHIR Server Base Url'
-      
-    input :credentials,
-    title: 'OAuth Credentials',
-    type: :oauth_credentials,
-    optional: true
+    input_order :url, :composition_id, :composition_status, :composition_type, :composition_subject, :composition_resource
 
     # 建議應該（SHOULD） 支援透過查詢參數 _id 查詢所有Composition：
     test do
@@ -21,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
         )
@@ -48,7 +41,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
         )
@@ -72,7 +65,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
         )
@@ -96,7 +89,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
         )

@@ -4,6 +4,8 @@ module InfernoTWCoreIG
     description 'Verify that the server makes Organization resources available'
     id :organization_group
 
+    input_order :url, :organization_id, :organization_identifier, :organization_name, :organization_type, :organization_resource
+
     # 建議應該（SHOULD） 支援透過查詢參數 _id 查詢所有Organization：
     test do
       title '[GET] Server returns valid results for Organization search by _id'
@@ -12,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
         )
@@ -39,7 +41,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
         )
@@ -63,7 +65,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
         )
@@ -87,7 +89,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.2.2.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
         )
