@@ -122,11 +122,11 @@ module InfernoTWCoreIG
         title '[GET] CarePlan resource is valid'
         description %(
           Verify that the CarePlan resource search by patient and category returned from the server is a valid FHIR resource.
-  
+
           * Verifying the HTTP status code of a response.
-          
+   
           * Verifying that a string is valid JSON.
-          
+      
           * Validating a FHIR Resource.
 
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
