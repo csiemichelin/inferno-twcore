@@ -21,7 +21,9 @@ module InfernoTWCoreIG
         [臺灣核心-資料交換基本單位-文件（TW Core Bundle Document）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-document-twcore.html)
         
         [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :bundle_id,
         title: 'Bundle _id'
@@ -48,7 +50,9 @@ module InfernoTWCoreIG
         [臺灣核心-資料交換基本單位-文件（TW Core Bundle Document）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-document-twcore.html)
         
         [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :bundle_identifier,
             title: 'Bundle identifier'
@@ -108,6 +112,9 @@ module InfernoTWCoreIG
         
         [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
       )
+
+      input_order :url
+
       input :bundle_resource,
             title: 'Bundle Resource'
       
@@ -137,6 +144,8 @@ module InfernoTWCoreIG
         [臺灣核心-資料交換基本單位-信息（TW Core Bundle Message）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-message-twcore.html)
       )
 
+      input_order :url
+      
       input :bundle_resource,
             title: 'Bundle Resource'
 

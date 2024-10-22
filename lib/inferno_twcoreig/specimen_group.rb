@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-地點（TW Core Specimen）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Specimen-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :specimen_id,
         title: 'Specimen _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-地點（TW Core Specimen）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Specimen-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :specimen_status,
         title: 'Specimen status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-地點（TW Core Specimen）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Specimen-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :specimen_identifier,
         title: 'Specimen identifier'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-地點（TW Core Specimen）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Specimen-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :specimen_subject,
         title: 'Specimen subject'
@@ -144,6 +152,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-地點（TW Core Specimen）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Specimen-twcore.html)
       )
+
+      input_order :url
+
       input :specimen_resource,
             title: 'Specimen Resource'
       
@@ -168,6 +179,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-地點（TW Core Specimen）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Specimen-twcore.html)
       )
+
+      input_order :url
 
       input :specimen_resource,
             title: 'Specimen Resource'

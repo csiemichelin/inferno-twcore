@@ -19,6 +19,8 @@ module InfernoTWCoreIG
         [臺灣核心-照護團隊（TW Core CareTeam）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CareTeam-twcore.html)
       )
 
+      input_order :url
+
       input :careTeam_patient,
         title: 'CareTeam patient'
       
@@ -45,6 +47,8 @@ module InfernoTWCoreIG
         [臺灣核心-照護團隊（TW Core CareTeam）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CareTeam-twcore.html)
       )
 
+      input_order :url
+      
       input :careTeam_patient,
         title: 'CareTeam patient'
       
@@ -98,6 +102,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-照護團隊（TW Core CareTeam）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CareTeam-twcore.html)
       )
+
+      input_order :url
+
       input :careTeam_resource,
         title: 'CareTeam Resource'
       
@@ -123,6 +130,8 @@ module InfernoTWCoreIG
         [臺灣核心-照護團隊（TW Core CareTeam）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CareTeam-twcore.html)
       )
 
+      input_order :url
+      
       input :careTeam_resource,
         title: 'CareTeam Resource'
 

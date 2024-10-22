@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-健康照護服務提供者（TW Core Practitioner）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Practitioner-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :practitioner_id,
         title: 'Practitioner _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-健康照護服務提供者（TW Core Practitioner）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Practitioner-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :practitioner_identifier,
         title: 'Practitioner identifier'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-健康照護服務提供者（TW Core Practitioner）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Practitioner-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :practitioner_name,
         title: 'Practitioner name'
@@ -120,6 +126,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-健康照護服務提供者（TW Core Practitioner）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Practitioner-twcore.html)
       )
+
+      input_order :url
+
       input :practitioner_resource,
             title: 'Practitioner Resource'
       
@@ -145,6 +154,8 @@ module InfernoTWCoreIG
         [臺灣核心-健康照護服務提供者（TW Core Practitioner）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Practitioner-twcore.html)
       )
 
+      input_order :url
+      
       input :practitioner_resource,
             title: 'Practitioner Resource'
 

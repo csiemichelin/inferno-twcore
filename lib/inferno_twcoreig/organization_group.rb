@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :organization_id,
         title: 'Organization _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :organization_identifier,
         title: 'Organization identifier'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :organization_name,
         title: 'Organization name'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :organization_type,
         title: 'Organization type'
@@ -144,6 +152,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
       )
+
+      input_order :url
+
       input :organization_resource,
             title: 'Organization Resource'
       
@@ -168,6 +179,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-機構-政府機構&醫事機構&公司行號（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Organization-twcore.html)
       )
+
+      input_order :url
 
       input :organization_resource,
             title: 'Organization Resource'

@@ -19,6 +19,8 @@ module InfernoTWCoreIG
         [臺灣核心-給付範圍（TW Core Coverage）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Coverage-twcore.html)
       )
 
+      input_order :url
+
       input :coverage_patient,
         title: 'Coverage patient'
 
@@ -72,6 +74,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-給付範圍（TW Core Coverage）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Coverage-twcore.html)
       )
+
+      input_order :url
+
       input :coverage_resource,
         title: 'Coverage Resource'
       
@@ -97,6 +102,8 @@ module InfernoTWCoreIG
         [臺灣核心-給付範圍（TW Core Coverage）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Coverage-twcore.html)
       )
 
+      input_order :url
+      
       input :coverage_resource,
         title: 'Coverage Resource'
 

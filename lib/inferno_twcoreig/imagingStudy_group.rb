@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-影像檢查（TW Core ImagingStudy）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-ImagingStudy-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :imagingStudy_id,
         title: 'ImagingStudy _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-影像檢查（TW Core ImagingStudy）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-ImagingStudy-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :imagingStudy_status,
         title: 'ImagingStudy status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-影像檢查（TW Core ImagingStudy）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-ImagingStudy-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :imagingStudy_subject,
         title: 'ImagingStudy subject'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-影像檢查（TW Core ImagingStudy）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-ImagingStudy-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :imagingStudy_encounter,
         title: 'ImagingStudy encounter'
@@ -116,7 +124,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-影像檢查（TW Core ImagingStudy）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-ImagingStudy-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :imagingStudy_started,
         title: 'ImagingStudy started'
@@ -168,6 +178,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-影像檢查（TW Core ImagingStudy）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-ImagingStudy-twcore.html)
       )
+
+      input_order :url
+
       input :imagingStudy_resource,
             title: 'ImagingStudy Resource'
       
@@ -193,6 +206,8 @@ module InfernoTWCoreIG
         [臺灣核心-影像檢查（TW Core ImagingStudy）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-ImagingStudy-twcore.html)
       )
 
+      input_order :url
+      
       input :imagingStudy_resource,
             title: 'ImagingStudy Resource'
 

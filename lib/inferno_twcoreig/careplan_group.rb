@@ -19,6 +19,8 @@ module InfernoTWCoreIG
         [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
       )
 
+      input_order :url
+
       input :carePlan_patient,
         title: 'CarePlan patient'
       
@@ -44,6 +46,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
       )
+
+      input_order :url
 
       input :carePlan_patient,
         title: 'CarePlan patient'
@@ -71,6 +75,8 @@ module InfernoTWCoreIG
         [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
       )
 
+      input_order :url
+
       input :carePlan_patient,
         title: 'CarePlan patient'
       
@@ -96,6 +102,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
       )
+
+      input_order :url
 
       input :carePlan_patient,
         title: 'CarePlan patient'
@@ -131,6 +139,7 @@ module InfernoTWCoreIG
 
         [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
       )
+      
       # This test will use the response from the :carePlan request in the
       # previous test
       uses_request :carePlan
@@ -156,6 +165,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
       )
+
+      input_order :url
+
       input :carePlan_resource,
         title: 'CarePlan Resource'
       
@@ -180,6 +192,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
       )
+
+      input_order :url
 
       input :carePlan_resource,
         title: 'CarePlan Resource'

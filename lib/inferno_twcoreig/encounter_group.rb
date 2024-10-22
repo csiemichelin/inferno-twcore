@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :encounter_id,
         title: 'Encounter _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :encounter_class,
         title: 'Encounter class'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :encounter_date,
         title: 'Encounter date'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :encounter_identifier,
         title: 'Encounter identifier'
@@ -116,7 +124,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :encounter_location,
         title: 'Encounter location'
@@ -140,7 +150,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :encounter_subject,
         title: 'Encounter subject'
@@ -164,7 +176,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :encounter_status,
         title: 'Encounter status'
@@ -216,6 +230,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
       )
+
+      input_order :url
+
       input :encounter_resource,
             title: 'Encounter Resource'
       
@@ -241,6 +258,8 @@ module InfernoTWCoreIG
         [臺灣核心-就醫事件（TW Core Encounter）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)
       )
 
+      input_order :url
+      
       input :encounter_resource,
             title: 'Encounter Resource'
 

@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :condition_id,
         title: 'Condition _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :condition_clinicalStatus,
         title: 'Condition clinical-status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :condition_code,
         title: 'Condition code'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :condition_subject,
         title: 'Condition subject'
@@ -116,7 +124,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :condition_onsetDate,
         title: 'Condition onset-date'
@@ -140,7 +150,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :condition_abatementDate,
         title: 'Condition abatement-date'
@@ -164,7 +176,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :condition_severity,
         title: 'Condition severity'
@@ -216,6 +230,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
+
+      input_order :url
+
       input :condition_resource,
             title: 'Condition Resource'
       
@@ -240,6 +257,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
+
+      input_order :url
 
       input :condition_resource,
             title: 'Condition Resource'

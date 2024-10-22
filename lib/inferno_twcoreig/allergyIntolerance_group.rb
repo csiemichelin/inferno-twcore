@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-過敏或不耐症（TW Core AllergyIntolerance）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-AllergyIntolerance-twcore.html)
-        )
+      )
+      
+      input_order :url
 
       input :allergyIntolerance_id,
         title: 'AllergyIntolerance _id'
@@ -40,7 +42,9 @@ module InfernoTWCoreIG
         A server SHALL support searching by clinical-status on the AllergyIntolerance resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
 
         [臺灣核心-過敏或不耐症（TW Core AllergyIntolerance）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-AllergyIntolerance-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :allergyIntolerance_clinicalStatus,
             title: 'AllergyIntolerance clinical-status'
@@ -92,6 +96,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-過敏或不耐症（TW Core AllergyIntolerance）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-AllergyIntolerance-twcore.html)
       )
+
+      input_order :url
+
       input :allergyIntolerance_resource,
             title: 'AllergyIntolerance Resource'
       
@@ -117,6 +124,8 @@ module InfernoTWCoreIG
         [臺灣核心-過敏或不耐症（TW Core AllergyIntolerance）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-AllergyIntolerance-twcore.html)
       )
 
+      input_order :url
+      
       input :allergyIntolerance_resource,
             title: 'AllergyIntolerance Resource'
 

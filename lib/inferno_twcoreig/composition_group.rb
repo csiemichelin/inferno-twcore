@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :composition_id,
         title: 'Composition _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :composition_status,
         title: 'Composition status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :composition_type,
         title: 'Composition type'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :composition_subject,
         title: 'Composition subject'
@@ -144,6 +152,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
       )
+
+      input_order :url
+
       input :composition_resource,
             title: 'Composition Resource'
       
@@ -169,6 +180,8 @@ module InfernoTWCoreIG
         [臺灣核心-臨床文件架構（TW Core Composition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Composition-twcore.html)
       )
 
+      input_order :url
+      
       input :composition_resource,
             title: 'Composition Resource'
 

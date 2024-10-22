@@ -19,6 +19,8 @@ module InfernoTWCoreIG
         [臺灣核心-疫苗接種（TW Core Immunization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html)
       )
 
+      input_order :url
+
       input :immunization_patient,
         title: 'Immunization patient'
 
@@ -42,6 +44,8 @@ module InfernoTWCoreIG
         [臺灣核心-疫苗接種（TW Core Immunization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html)
       )
 
+      input_order :url
+
       input :immunization_patient,
         title: 'Immunization patient'
       
@@ -64,6 +68,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-疫苗接種（TW Core Immunization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html)
       )
+
+      input_order :url
 
       input :immunization_patient,
         title: 'Immunization patient'
@@ -118,6 +124,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-疫苗接種（TW Core Immunization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html)
       )
+
+      input_order :url
+
       input :immunization_resource,
         title: 'Immunization Resource'
       
@@ -142,6 +151,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-疫苗接種（TW Core Immunization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html)
       )
+
+      input_order :url
 
       input :immunization_resource,
         title: 'Immunization Resource'

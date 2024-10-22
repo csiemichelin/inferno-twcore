@@ -19,6 +19,8 @@ module InfernoTWCoreIG
         [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
       )
 
+      input_order :url
+
       input :goal_patient,
         title: 'Goal patient'
 
@@ -41,6 +43,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
       )
+
+      input_order :url
 
       input :goal_patient,
         title: 'Goal patient'
@@ -65,6 +69,8 @@ module InfernoTWCoreIG
         [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
       )
 
+      input_order :url
+
       input :goal_patient,
         title: 'Goal patient'
       
@@ -87,6 +93,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
       )
+
+      input_order :url
 
       input :goal_patient,
         title: 'Goal patient'
@@ -141,6 +149,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
       )
+
+      input_order :url
+
       input :goal_resource,
         title: 'Goal Resource'
       
@@ -166,6 +177,8 @@ module InfernoTWCoreIG
         [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
       )
 
+      input_order :url
+      
       input :goal_resource,
         title: 'Goal Resource'
 

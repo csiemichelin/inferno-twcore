@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-診斷報告（TW Core DiagnosticReport）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :diagnosticReport_id,
         title: 'DiagnosticReport _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-診斷報告（TW Core DiagnosticReport）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :diagnosticReport_status,
         title: 'DiagnosticReport status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-診斷報告（TW Core DiagnosticReport）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :diagnosticReport_subject,
         title: 'DiagnosticReport subject'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-診斷報告（TW Core DiagnosticReport）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :diagnosticReport_category,
         title: 'DiagnosticReport category'
@@ -116,7 +124,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-診斷報告（TW Core DiagnosticReport）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :diagnosticReport_code,
         title: 'DiagnosticReport code'
@@ -140,7 +150,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-診斷報告（TW Core DiagnosticReport）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :diagnosticReport_date,
         title: 'DiagnosticReport date'
@@ -192,6 +204,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-診斷報告（TW Core DiagnosticReport）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)
       )
+
+      input_order :url
+
       input :diagnosticReport_resource,
             title: 'DiagnosticReport Resource'
       
@@ -217,6 +232,8 @@ module InfernoTWCoreIG
         [臺灣核心-診斷報告（TW Core DiagnosticReport）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)
       )
 
+      input_order :url
+      
       input :diagnosticReport_resource,
             title: 'DiagnosticReport Resource'
 

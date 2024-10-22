@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-文件參照（TW Core DocumentReference）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :documentReference_id,
         title: 'DocumentReference _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-文件參照（TW Core DocumentReference）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :documentReference_status,
         title: 'DocumentReference status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-文件參照（TW Core DocumentReference）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :documentReference_subject,
         title: 'DocumentReference subject'
@@ -120,6 +126,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-文件參照（TW Core DocumentReference）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)
       )
+
+      input_order :url
+
       input :documentReference_resource,
             title: 'DocumentReference Resource'
       
@@ -145,6 +154,8 @@ module InfernoTWCoreIG
         [臺灣核心-文件參照（TW Core DocumentReference）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)
       )
 
+      input_order :url
+      
       input :documentReference_resource,
             title: 'DocumentReference Resource'
 

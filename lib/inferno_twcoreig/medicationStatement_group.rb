@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-用藥聲明（TW Core MedicationStatement）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationStatement-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationStatement_id,
         title: 'MedicationStatement _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-用藥聲明（TW Core MedicationStatement）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationStatement-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationStatement_status,
         title: 'MedicationStatement status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-用藥聲明（TW Core MedicationStatement）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationStatement-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationStatement_medication,
         title: 'MedicationStatement medication'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-用藥聲明（TW Core MedicationStatement）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationStatement-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationStatement_subject,
         title: 'MedicationStatement subject'
@@ -144,6 +152,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-用藥聲明（TW Core MedicationStatement）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationStatement-twcore.html)
       )
+
+      input_order :url
+
       input :medicationStatement_resource,
             title: 'MedicationStatement Resource'
       
@@ -168,6 +179,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-用藥聲明（TW Core MedicationStatement）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationStatement-twcore.html)
       )
+
+      input_order :url
 
       input :medicationStatement_resource,
             title: 'MedicationStatement Resource'

@@ -19,6 +19,8 @@ module InfernoTWCoreIG
         [臺灣核心-植入式裝置（TW Core Implantable Device）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Device-twcore.html)
       )
 
+      input_order :url
+
       input :device_patient,
         title: 'Device patient'
 
@@ -42,6 +44,8 @@ module InfernoTWCoreIG
         [臺灣核心-植入式裝置（TW Core Implantable Device）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Device-twcore.html)
       )
 
+      input_order :url
+
       input :device_patient,
         title: 'Device patient'
       
@@ -64,6 +68,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-植入式裝置（TW Core Implantable Device）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Device-twcore.html)
       )
+
+      input_order :url
 
       input :device_patient,
         title: 'Device patient'
@@ -118,6 +124,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-植入式裝置（TW Core Implantable Device）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Device-twcore.html)
       )
+
+      input_order :url
+
       input :device_resource,
         title: 'Device Resource'
       
@@ -142,6 +151,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-植入式裝置（TW Core Implantable Device）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Device-twcore.html)
       )
+
+      input_order :url
 
       input :device_resource,
         title: 'Device Resource'

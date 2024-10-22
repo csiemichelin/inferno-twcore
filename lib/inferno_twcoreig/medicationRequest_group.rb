@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationRequest_id,
         title: 'MedicationRequest _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationRequest_status,
         title: 'MedicationRequest status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationRequest_intent,
         title: 'MedicationRequest intent'
@@ -92,7 +98,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationRequest_subject,
         title: 'MedicationRequest subject'
@@ -116,7 +124,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationRequest_medication,
         title: 'MedicationRequest medication'
@@ -140,7 +150,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationRequest_encounter,
         title: 'MedicationRequest encounter'
@@ -164,7 +176,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :medicationRequest_authoredon,
         title: 'MedicationRequest authoredon'
@@ -216,6 +230,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
       )
+
+      input_order :url
+
       input :medicationRequest_resource,
             title: 'MedicationRequest Resource'
       
@@ -240,6 +257,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-藥品請求（TW Core MedicationRequest）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationRequest-twcore.html)
       )
+
+      input_order :url
 
       input :medicationRequest_resource,
             title: 'MedicationRequest Resource'

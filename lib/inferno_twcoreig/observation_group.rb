@@ -25,8 +25,9 @@ module InfernoTWCoreIG
         [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
 
+      # 讓 url開頭
       input_order :url
-      
+
       input :observation_id,
         title: 'Observation _id'
 
@@ -59,6 +60,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
+
+      input_order :url
 
       input :observation_category,
         title: 'Observation category'
@@ -120,6 +123,8 @@ module InfernoTWCoreIG
         [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
 
+      input_order :url
+
       input :observation_performer,
         title: 'Observation performer'
 
@@ -149,6 +154,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
+
+      input_order :url
 
       input :observation_status,
         title: 'Observation status'
@@ -180,6 +187,8 @@ module InfernoTWCoreIG
         [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
 
+      input_order :url
+
       input :observation_subject,
         title: 'Observation subject'
 
@@ -209,6 +218,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-身體質量指數（TW Core Observation BMI）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bmi-twcore.html)
       )
+
+      input_order :url
 
       input :observation_date,
         title: 'Observation date'
@@ -305,6 +316,8 @@ module InfernoTWCoreIG
         [臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-pediatric-head-circumference-twcore.html)
       )
 
+      input_order :url
+
       input :observation_patient,
         title: 'Observation patient'
       
@@ -374,6 +387,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-pediatric-head-circumference-twcore.html)
       )
+
+      input_order :url
 
       input :observation_patient,
         title: 'Observation patient'
@@ -445,6 +460,8 @@ module InfernoTWCoreIG
         [臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-pediatric-head-circumference-twcore.html)
       )
 
+      input_order :url
+
       input :observation_patient,
         title: 'Observation patient'
       
@@ -514,6 +531,8 @@ module InfernoTWCoreIG
         [臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-pediatric-head-circumference-twcore.html)
       )
 
+      input_order :url
+
       input :observation_patient,
         title: 'Observation patient'
       
@@ -580,6 +599,8 @@ module InfernoTWCoreIG
         [臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-pediatric-head-circumference-twcore.html)
       )
 
+      input_order :url
+
       input :observation_patient,
         title: 'Observation patient'
       
@@ -645,6 +666,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-pediatric-head-circumference-twcore.html)
       )
+
+      input_order :url
 
       input :observation_patient,
         title: 'Observation patient'
@@ -790,6 +813,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-pediatric-head-circumference-twcore.html)
       )
+
+      input_order :url
+
       input :observation_resource,
             title: 'Observation Resource'
       
@@ -863,6 +889,8 @@ module InfernoTWCoreIG
         [臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-pediatric-head-circumference-twcore.html)
       )
 
+      input_order :url
+      
       input :observation_resource,
             title: 'Observation Resource'
 

@@ -17,7 +17,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-多媒體（TW Core Media）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Media-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :media_id,
         title: 'Media _id'
@@ -44,7 +46,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-多媒體（TW Core Media）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Media-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :media_status,
         title: 'Media status'
@@ -68,7 +72,9 @@ module InfernoTWCoreIG
         Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
 
         [臺灣核心-多媒體（TW Core Media）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Media-twcore.html)
-        )
+      )
+
+      input_order :url
 
       input :media_subject,
         title: 'Media subject'
@@ -120,6 +126,9 @@ module InfernoTWCoreIG
 
         [臺灣核心-多媒體（TW Core Media）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Media-twcore.html)
       )
+
+      input_order :url
+
       input :media_resource,
             title: 'Media Resource'
       
@@ -144,6 +153,8 @@ module InfernoTWCoreIG
 
         [臺灣核心-多媒體（TW Core Media）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Media-twcore.html)
       )
+
+      input_order :url
 
       input :media_resource,
             title: 'Media Resource'
