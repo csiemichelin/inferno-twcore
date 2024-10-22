@@ -17,7 +17,7 @@ module InfernoTWCoreIG
           Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
   
           [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
-          )
+        )
   
         input :goal_patient,
           title: 'Goal patient'
@@ -40,7 +40,7 @@ module InfernoTWCoreIG
           A server SHALL support searching by patient and lifecycle-status on the Goal resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
   
           [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
-          )
+        )
   
         input :goal_patient,
           title: 'Goal patient'
@@ -63,7 +63,7 @@ module InfernoTWCoreIG
           A server SHALL support searching by patient and target-date on the Goal resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
   
           [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
-          )
+        )
   
         input :goal_patient,
           title: 'Goal patient'
@@ -86,7 +86,7 @@ module InfernoTWCoreIG
           A server SHALL support searching by patient and description on the Goal resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
   
           [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
-          )
+        )
   
         input :goal_patient,
           title: 'Goal patient'

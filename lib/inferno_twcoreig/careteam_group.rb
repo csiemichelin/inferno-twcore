@@ -17,7 +17,7 @@ module InfernoTWCoreIG
           Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
   
           [臺灣核心-照護團隊（TW Core CareTeam）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CareTeam-twcore.html)
-          )
+        )
   
         input :careTeam_patient,
           title: 'CareTeam patient'
@@ -43,7 +43,7 @@ module InfernoTWCoreIG
           A server SHALL support searching by patient and role on the CareTeam resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
   
           [臺灣核心-照護團隊（TW Core CareTeam）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CareTeam-twcore.html)
-          )
+        )
   
         input :careTeam_patient,
           title: 'CareTeam patient'

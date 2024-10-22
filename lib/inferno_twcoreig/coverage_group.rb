@@ -17,7 +17,7 @@ module InfernoTWCoreIG
           Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
   
           [臺灣核心-給付範圍（TW Core Coverage）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Coverage-twcore.html)
-          )
+        )
   
         input :coverage_patient,
           title: 'Coverage patient'

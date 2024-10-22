@@ -17,7 +17,7 @@ module InfernoTWCoreIG
           Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
   
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
-          )
+        )
   
         input :carePlan_patient,
           title: 'CarePlan patient'
@@ -43,7 +43,7 @@ module InfernoTWCoreIG
           A server SHALL support searching by patient, category and date on the CarePlan resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
   
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
-          )
+        )
   
         input :carePlan_patient,
           title: 'CarePlan patient'
@@ -69,7 +69,7 @@ module InfernoTWCoreIG
           A server SHALL support searching by patient, category and status on the CarePlan resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
   
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
-          )
+        )
   
         input :carePlan_patient,
           title: 'CarePlan patient'
@@ -95,7 +95,7 @@ module InfernoTWCoreIG
           A server SHALL support searching by patient, category, status and date on the CarePlan resource. This test will pass if resources are returned and match the search criteria. If none are returned, the test is skipped.
   
           [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
-          )
+        )
   
         input :carePlan_patient,
           title: 'CarePlan patient'
