@@ -26,8 +26,10 @@ require_relative 'inferno_twcoreig/practitioner_group'
 require_relative 'inferno_twcoreig/practitionerRole_group'
 require_relative 'inferno_twcoreig/procedure_group'
 require_relative 'inferno_twcoreig/provenance_group'
+require_relative 'inferno_twcoreig/questionnaireResponse_group'
+require_relative 'inferno_twcoreig/relatedPerson_group'
+require_relative 'inferno_twcoreig/serviceRequest_group'
 require_relative 'inferno_twcoreig/specimen_group'
-require_relative 'inferno_twcoreig/'
 
 module InfernoTWCoreIG
   class Suite < Inferno::TestSuite
@@ -130,6 +132,9 @@ module InfernoTWCoreIG
       group from: :practitionerRole_group
       group from: :procedure_group
       group from: :provenance_group
+      group from: :questionnaireResponse_group
+      group from: :relatedPerson_group
+      group from: :serviceRequest_group
       group from: :specimen_group
     end
   end
