@@ -1,13 +1,8 @@
 PATH
   remote: .
   specs:
-<<<<<<< HEAD
-    inferno_twcoreig (0.0.1)
-      inferno_core (~> 0.4.38)
-=======
     inferno_template (0.0.1)
       inferno_core (~> 0.5.0)
->>>>>>> upstream/main
 
 GEM
   remote: https://rubygems.org/

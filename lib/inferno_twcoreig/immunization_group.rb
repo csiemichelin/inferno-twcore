@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-疫苗接種（TW Core Immunization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html)
       )
@@ -22,7 +22,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :immunization_patient,
-        title: 'Immunization patient'
+        title: 'Immunization patient',
+        default: 'Patient/pat-nsysu-hd-1'
 
       # Named requests can be used by other tests
       makes_request :immunization
@@ -31,7 +32,7 @@ module InfernoTWCoreIG
         fhir_search('Immunization', params: { 'patient': immunization_patient }, name: :immunization)
 
         assert_response_status(200)
-        assert_resource_type('Immunization')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -47,16 +48,18 @@ module InfernoTWCoreIG
       input_order :url
 
       input :immunization_patient,
-        title: 'Immunization patient'
+        title: 'Immunization patient',
+        default: 'Patient/pat-nsysu-hd-1'
       
       input :immunization_date,
-        title: 'Immunization date'
+        title: 'Immunization date',
+        default: 'gt2021-07-01'
 
       run do
         fhir_search('Immunization', params: { 'patient': immunization_patient, 'date': immunization_date })
 
         assert_response_status(200)
-        assert_resource_type('Immunization')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -72,16 +75,18 @@ module InfernoTWCoreIG
       input_order :url
 
       input :immunization_patient,
-        title: 'Immunization patient'
+        title: 'Immunization patient',
+        default: 'Patient/pat-nsysu-hd-1'
       
       input :immunization_status,
-        title: 'Immunization status'
+        title: 'Immunization status',
+        default: 'completed'
 
       run do
         fhir_search('Immunization', params: { 'patient': immunization_patient, 'status': immunization_status })
 
         assert_response_status(200)
-        assert_resource_type('Immunization')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -105,7 +110,7 @@ module InfernoTWCoreIG
 
       run do
         assert_response_status(200)
-        assert_resource_type('Immunization')
+        assert_resource_type('Bundle')
         assert_valid_resource
       end
     end
@@ -128,7 +133,43 @@ module InfernoTWCoreIG
       input_order :url
 
       input :immunization_resource,
-        title: 'Immunization Resource'
+        title: 'Immunization Resource',
+        default: '''{
+          "resourceType" : "Immunization",
+          "id" : "imm-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Immunization-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization imm-example</b></p><a name=\"imm-example\"> </a><a name=\"hcimm-example\"> </a><a name=\"imm-example-en-US\"> </a><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{http://hl7.org/fhir/sid/cvx 197}, {http://hl7.org/fhir/sid/ndc 49281012165}\">influenza, high-dose, quadrivalent</span></p><p><b>patient</b>: <a href=\"Patient-pat-example.html\">陳加玲(official) Female, DoB: 1990-01-01 ( Medical record number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-example.html\">Encounter: identifier = http://healthcare.example.org/identifiers/enocunter#E22081702; status = finished; class = pre-admission (ActCode#PRENC); type = Annual diabetes mellitus screening; serviceType = Nephrology (qualifier value); period = 2022-08-01 17:00:14+0800 --&gt; 2022-08-01 18:00:14+0800; reasonCode = FH: Diabetes mellitus</a></p><p><b>occurrence</b>: 2020-11-19 12:46:57-0800</p><p><b>primarySource</b>: false</p><p><b>location</b>: <a href=\"Location-loc-ent-example.html\">Location 衛生福利部臺北醫院耳鼻喉科</a></p></div>"
+          },
+          "status" : "completed",
+          "vaccineCode" : {
+            "coding" : [{
+              "system" : "http://hl7.org/fhir/sid/cvx",
+              "code" : "197",
+              "display" : "influenza, high-dose, quadrivalent"
+            },
+            {
+              "system" : "http://hl7.org/fhir/sid/ndc",
+              "code" : "49281012165",
+              "display" : "FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65) > .7 mL in 1 SYRINGE, GLASS (49281-121-88) (package)"
+            }],
+            "text" : "influenza, high-dose, quadrivalent"
+          },
+          "patient" : {
+            "reference" : "Patient/pat-nsysu-hd-001"
+          },
+          "encounter" : {
+            "reference" : "Encounter/13427"
+          },
+          "occurrenceDateTime" : "2020-11-19T12:46:57-08:00",
+          "primarySource" : false,
+          "location" : {
+            "reference" : "Location/13386"
+          }
+        }'''
       
       output :immunization_value
       

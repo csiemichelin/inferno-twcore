@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-藥品（TW Core Medication）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Medication-twcore.html)
       )
@@ -22,7 +22,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medication_id,
-        title: 'Medication _id'
+        title: 'Medication _id',
+        default: '13173'
 
       # Named requests can be used by other tests
       makes_request :medication
@@ -43,7 +44,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-藥品（TW Core Medication）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Medication-twcore.html)
       )
@@ -51,7 +52,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medication_code,
-        title: 'Medication code'
+        title: 'Medication code',
+        default: '衛署藥輸字第025485號'
 
       run do
         fhir_search('Medication', params: { code: medication_code })
@@ -104,7 +106,28 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medication_resource,
-            title: 'Medication Resource'
+        title: 'Medication Resource',
+        default: '''{
+          "resourceType": "Medication",
+          "id": "13249",
+          "meta": {
+              "versionId": "1",
+              "lastUpdated": "2024-08-02T03:28:00.801+00:00",
+              "source": "#D1SM7qj10QrFrUNW",
+              "profile": [
+                  "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Medication-twcore"
+              ]
+          },
+          "form": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                      "code": "POWD"
+                  }
+              ],
+              "text": "粉"
+          }
+      }'''
       
       output :medication_value
       
@@ -131,7 +154,7 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medication_resource,
-            title: 'Medication Resource'
+        title: 'Medication Resource'
 
       run do 
         resource_hash = JSON.parse(medication_resource)

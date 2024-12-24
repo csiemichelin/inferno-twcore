@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
       )
@@ -22,7 +22,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medicationDispense_id,
-        title: 'MedicationDispense _id'
+        title: 'MedicationDispense _id',
+        default: '14021'
 
       # Named requests can be used by other tests
       makes_request :medicationDispense
@@ -43,7 +44,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
       )
@@ -51,7 +52,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medicationDispense_status,
-        title: 'MedicationDispense status'
+        title: 'MedicationDispense status',
+        default: 'preparation'
 
       run do
         fhir_search('MedicationDispense', params: { status: medicationDispense_status })
@@ -69,7 +71,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
       )
@@ -77,7 +79,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medicationDispense_subject,
-        title: 'MedicationDispense subject'
+        title: 'MedicationDispense subject',
+        default: 'Patient/13674'
 
       run do
         fhir_search('MedicationDispense', params: { subject: medicationDispense_subject })
@@ -95,7 +98,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-配藥或藥品調劑（TW Core MedicationDispense）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-MedicationDispense-twcore.html)
       )
@@ -103,7 +106,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medicationDispense_medication,
-        title: 'MedicationDispense medication'
+        title: 'MedicationDispense medication',
+        default: 'Medication/14017'
 
       run do
         fhir_search('MedicationDispense', params: { medication: medicationDispense_medication })
@@ -156,7 +160,85 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medicationDispense_resource,
-            title: 'MedicationDispense Resource'
+        title: 'MedicationDispense Resource',
+        default: '''{
+          "resourceType" : "MedicationDispense",
+          "id" : "med-dis-ref-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/MedicationDispense-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3><b>阿立批挫藥品配藥資料</b></h3><p><b>配藥的狀態</b>：Completed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://hl7.org/fhir/R4/valueset-medicationdispense-status.html\">MedicationDispense Status Codes</a>#completed)</span></p><p><b>配藥的分類</b>： Inpatient <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://hl7.org/fhir/R4/valueset-medicationdispense-category.html\">MedicationDispense Category Codes</a>#inpatient)</span></p><p><b>配藥的類型</b>：Daily Fill <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://hl7.org/implement/standards/fhir/R4/v3/ActPharmacySupplyType/vs.html\">V3 Value SetActPharmacySupplyType</a>#DF)</span></p><p><b>藥品</b>：<a href=\"Medication-med-example.html\">Medication/med-example</a></p><p><b>病人</b>：<a href=\"Patient-pat-example.html\">Patient/pat-example</a> \"陳加玲\"</p><p><b>就醫資料</b>：<a href=\"Encounter-enc-example.html\">Encounter/enc-example</a></p><p><b>配藥者</b>：<a href=\"Practitioner-pra-phc-example.html\">Practitioner/pra-phc-example</a> \"陳耀詩\"</p><blockquote><p><b>配藥資料</b>：</p><p><b>藥品總劑量</b>：30 Tablet <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm\">OrderableDrugForm</a>#TAB)</span><br/><b>藥品天數</b>：30 days<br/><b>藥品使用方法</b>：每天早上口服一次<br/><b>藥品包裝和審核時間</b>：2022-08-01T07:00:14<br/><b>藥品發放的時間</b>：2022-08-01T08:15:14</p></blockquote><blockquote><p><b>藥品替代資料</b>：</p><p><b>配藥時是否進行了藥品替代</b>： 否<br/><b>配藥是否與處方要求不同</b>：none <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution\">SubstanceAdminSubstitution</a>#N)</span><br/><b>替代原因</b>：formulary policy <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://terminology.hl7.org/CodeSystem/v3-ActReason\">ActReason</a>#FP)</span></p></blockquote></div>"
+          },
+          "status" : "completed",
+          "category" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+              "code" : "inpatient"
+            }]
+          },
+          "medicationReference" : {
+            "reference" : "Medication/14017"
+          },
+          "subject" : {
+            "reference" : "Patient/pat-nsysu-hd-001"
+          },
+          "context" : {
+            "reference" : "Encounter/13427"
+          },
+          "performer" : [{
+            "actor" : {
+              "reference" : "Practitioner/1004"
+            }
+          }],
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code" : "DF",
+              "display" : "Daily Fill"
+            }]
+          },
+          "quantity" : {
+            "value" : 30,
+            "unit" : "TAB",
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+            "code" : "TAB"
+          },
+          "daysSupply" : {
+            "value" : 30,
+            "unit" : "days"
+          },
+          "whenPrepared" : "2022-08-01T07:00:14+08:00",
+          "whenHandedOver" : "2022-08-01T08:15:14+08:00",
+          "dosageInstruction" : [{
+            "text" : "每天早上口服一次",
+            "timing" : {
+              "repeat" : {
+                "frequency" : 1,
+                "period" : 1,
+                "periodUnit" : "d"
+              }
+            }
+          }],
+          "substitution" : {
+            "wasSubstituted" : false,
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+                "code" : "N",
+                "display" : "none"
+              }]
+            },
+            "reason" : [{
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code" : "FP",
+                "display" : "formulary policy"
+              }]
+            }]
+          }
+        }'''
       
       output :medicationDispense_value
       
@@ -183,7 +265,7 @@ module InfernoTWCoreIG
       input_order :url
 
       input :medicationDispense_resource,
-            title: 'MedicationDispense Resource'
+        title: 'MedicationDispense Resource'
 
       run do 
         resource_hash = JSON.parse(medicationDispense_resource)

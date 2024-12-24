@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-文件參照（TW Core DocumentReference）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)
       )
@@ -22,7 +22,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :documentReference_id,
-        title: 'DocumentReference _id'
+        title: 'DocumentReference _id',
+        default: '13396'
 
       # Named requests can be used by other tests
       makes_request :documentReference
@@ -43,7 +44,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-文件參照（TW Core DocumentReference）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)
       )
@@ -51,7 +52,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :documentReference_status,
-        title: 'DocumentReference status'
+        title: 'DocumentReference status',
+        default: 'current'
 
       run do
         fhir_search('DocumentReference', params: { 'status': documentReference_status })
@@ -69,7 +71,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-文件參照（TW Core DocumentReference）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)
       )
@@ -77,7 +79,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :documentReference_subject,
-        title: 'DocumentReference subject'
+        title: 'DocumentReference subject',
+        default: 'Practitioner/13385'
 
       run do
         fhir_search('DocumentReference', params: { subject: documentReference_subject })
@@ -130,7 +133,49 @@ module InfernoTWCoreIG
       input_order :url
 
       input :documentReference_resource,
-            title: 'DocumentReference Resource'
+        title: 'DocumentReference Resource',
+        default: '''{
+          "resourceType" : "DocumentReference",
+          "id" : "doc-wound-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/DocumentReference-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3><b>驗傷報告</b></h3><p><b>狀態</b>：Current <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://hl7.org/fhir/R4/codesystem-document-reference-status.html\">DocumentReferenceStatus</a>#current)</span></p><p><b>類型(type)</b>：驗傷報告(Injury event summary Document) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://loinc.org\">LOINC</a>#74209-8)</span></p><p><b>病人</b>：<a href=\"Patient-pat-example.html\">Patient/pat-example</a> \"陳加玲\"</p><p><b>日期</b>：2024-01-23T15:45:00</p><p><b>紀錄者</b>：<a href=\"Practitioner-pra-dr-example.html\">Practitioner/pra-dr-example</a> \"王依昇\"</p><p><b>就醫資料</b>：<a href=\"Encounter-enc-example.html\">Encounter/enc-example</a> \"就醫資料\"</p><p><b>紀錄中使用的檔案</b>：</p><blockquote><p><b>檔案類型(type)</b>：image/jpeg</p><p><b>檔案</b>：<a href=\"https://obs.line-scdn.net/0hJczFr9HRFUxHPzhi5CVqG31pFiN0UwZPIwlETwRRS3g5ClpKL1wPImRrSCg6D1ISKQlYKGY7Dn1jBlZPf1sP/w1200\"> Wound Photo</a></p></blockquote></div>"
+          },
+          "status" : "current",
+          "type" : {
+            "coding" : [{
+              "system" : "http://loinc.org",
+              "code" : "74209-8",
+              "display" : "Injury event summary Document"
+            }],
+            "text" : "驗傷報告"
+          },
+          "subject" : {
+            "reference" : "Patient/pat-nsysu-hd-001"
+          },
+          "date" : "2024-01-23T15:45:00Z",
+          "author" : [{
+            "reference" : "Practitioner/1004"
+          }],
+          "custodian" : {
+            "reference" : "Organization/org-nsysu"
+          },
+          "content" : [{
+            "attachment" : {
+              "contentType" : "image/jpeg",
+              "url" : "https://obs.line-scdn.net/0hJczFr9HRFUxHPzhi5CVqG31pFiN0UwZPIwlETwRRS3g5ClpKL1wPImRrSCg6D1ISKQlYKGY7Dn1jBlZPf1sP/w1200",
+              "title" : "Wound Photo"
+            }
+          }],
+          "context" : {
+            "encounter" : [{
+              "reference" : "Encounter/13427"
+            }]
+          }
+        }'''
       
       output :documentReference_value
       
@@ -157,7 +202,7 @@ module InfernoTWCoreIG
       input_order :url
       
       input :documentReference_resource,
-            title: 'DocumentReference Resource'
+        title: 'DocumentReference Resource'
 
       run do 
         resource_hash = JSON.parse(documentReference_resource)

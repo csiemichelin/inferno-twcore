@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
 
@@ -29,7 +29,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_id,
-        title: 'Observation _id'
+        title: 'Observation _id',
+        default: '15886'
 
       # Named requests can be used by other tests
       makes_request :observation
@@ -50,7 +51,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
 
@@ -64,7 +65,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_category,
-        title: 'Observation category'
+        title: 'Observation category',
+        default: 'vital-signs'
 
       run do
         fhir_search('Observation', params: { category: observation_category })
@@ -82,7 +84,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
 
@@ -94,7 +96,8 @@ module InfernoTWCoreIG
       )
 
       input :observation_code,
-        title: 'Observation code'
+        title: 'Observation code',
+        default: '29463-7'
 
       run do
         fhir_search('Observation', params: { code: observation_code })
@@ -112,7 +115,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
 
@@ -126,7 +129,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_performer,
-        title: 'Observation performer'
+        title: 'Observation performer',
+        default: 'Organization/org-nsysu'
 
       run do
         fhir_search('Observation', params: { performer: observation_performer })
@@ -144,7 +148,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
 
@@ -158,7 +162,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_status,
-        title: 'Observation status'
+        title: 'Observation status',
+        default: 'final'
 
       run do
         fhir_search('Observation', params: { status: observation_status })
@@ -176,7 +181,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
 
@@ -190,7 +195,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_subject,
-        title: 'Observation subject'
+        title: 'Observation subject',
+        default: 'Patient/pat-nsysu-hd-001'
 
       run do
         fhir_search('Observation', params: { subject: observation_subject })
@@ -208,7 +214,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-實驗室檢驗檢查（TW Core Observation Laboratory Result）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)
 
@@ -222,7 +228,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_date,
-        title: 'Observation date'
+        title: 'Observation date',
+        default: 'gt2022-04-01'
 
       run do
         fhir_search('Observation', params: { date: observation_date })
@@ -271,7 +278,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-平均血壓（TW Core Observation Average Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-averageBloodPressure-twcore.html)
 
@@ -319,10 +326,12 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_patient,
-        title: 'Observation patient'
+        title: 'Observation patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :observation_category,
-        title: 'Observation category'
+        title: 'Observation category',
+        default: 'vital-signs'
 
       # Named requests can be used by other tests
       makes_request :observation_patient_category
@@ -331,7 +340,7 @@ module InfernoTWCoreIG
         fhir_search('Observation', params: { 'patient': observation_patient, 'category': observation_category }, name: :observation_patient_category)
 
         assert_response_status(200)
-        assert_resource_type('Observation')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -343,7 +352,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-平均血壓（TW Core Observation Average Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-averageBloodPressure-twcore.html)
 
@@ -391,10 +400,12 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_patient,
-        title: 'Observation patient'
+        title: 'Observation patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :observation_code,
-        title: 'Observation code'
+        title: 'Observation code',
+        default: '29463-7'
 
       # Named requests can be used by other tests
       makes_request :observation
@@ -403,7 +414,7 @@ module InfernoTWCoreIG
         fhir_search('Observation', params: { 'patient': observation_patient, 'code': observation_code }, name: :observation)
 
         assert_response_status(200)
-        assert_resource_type('Observation')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -415,7 +426,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-平均血壓（TW Core Observation Average Blood Pressure）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-averageBloodPressure-twcore.html)
 
@@ -463,13 +474,16 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_patient,
-        title: 'Observation patient'
+        title: 'Observation patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :observation_category,
-        title: 'Observation category'
+        title: 'Observation category',
+        default: 'vital-signs'
       
       input :observation_date,
-        title: 'Observation date'
+        title: 'Observation date',
+        default: 'gt2022-04-01'
 
       # Named requests can be used by other tests
       makes_request :observation
@@ -478,7 +492,7 @@ module InfernoTWCoreIG
         fhir_search('Observation', params: { 'patient': observation_patient, 'category': observation_category, 'date': observation_date }, name: :observation)
 
         assert_response_status(200)
-        assert_resource_type('Observation')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -534,19 +548,22 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_patient,
-        title: 'Observation patient'
+        title: 'Observation patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :observation_category,
-        title: 'Observation category'
+        title: 'Observation category',
+        default: 'vital-signs'
 
       input :observation_status,
-        title: 'Observation status'
+        title: 'Observation status',
+        default: 'final'
 
       run do
         fhir_search('Observation', params: { 'patient': observation_patient, 'category': observation_category, 'status': observation_status })
 
         assert_response_status(200)
-        assert_resource_type('Observation')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -602,19 +619,22 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_patient,
-        title: 'Observation patient'
+        title: 'Observation patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :observation_category,
-        title: 'Observation category'
+        title: 'Observation category',
+        default: 'vital-signs'
 
       input :observation_lastUpdated,
-        title: 'Observation _lastUpdated'
+        title: 'Observation _lastUpdated',
+        default: 'gt2022-04-01'
 
       run do
         fhir_search('Observation', params: { 'patient': observation_patient, 'category': observation_category, '_lastUpdated': observation_lastUpdated })
 
         assert_response_status(200)
-        assert_resource_type('Observation')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -670,19 +690,22 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_patient,
-        title: 'Observation patient'
+        title: 'Observation patient',
+        default: 'Organization/org-nsysu'
       
       input :observation_code,
-        title: 'Observation code'
+        title: 'Observation code',
+        default: '29463-7'
 
       input :observation_date,
-        title: 'Observation date'
+        title: 'Observation date',
+        default: 'gt2022-04-01'
 
       run do
         fhir_search('Observation', params: { 'patient': observation_patient, 'code': observation_code, 'date': observation_date })
 
         assert_response_status(200)
-        assert_resource_type('Observation')
+        assert_resource_type('Bundle')
       end
     end
     
@@ -817,7 +840,48 @@ module InfernoTWCoreIG
       input_order :url
 
       input :observation_resource,
-            title: 'Observation Resource'
+        title: 'Observation Resource',
+        default: '''{
+          "resourceType" : "Observation",
+          "id" : "obs-head-circumference-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-head-circumference-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation obs-head-circumference-example</b></p><a name=\"obs-head-circumference-example\"> </a><a name=\"hcobs-head-circumference-example\"> </a><a name=\"obs-head-circumference-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">生命體徵</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 9843-4}\">頭圍</span></p><p><b>subject</b>: <a href=\"Patient-pat-child-example.html\">李貝拉(official) Female, DoB: 2019-11-26 ( Medical record number\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2020-11-18 16:19:31+0800</p><p><b>performer</b>: <a href=\"Organization-org-hosp-example.html\">Organization 衛生福利部臺北醫院</a></p><p><b>value</b>: 56.2 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = \"cm\")</span></p></div>"
+          },
+          "status" : "final",
+          "category" : [{
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code" : "vital-signs",
+              "display" : "Vital Signs"
+            }],
+            "text" : "生命體徵"
+          }],
+          "code" : {
+            "coding" : [{
+              "system" : "http://loinc.org",
+              "code" : "9843-4",
+              "display" : "Head Occipital-frontal circumference"
+            }],
+            "text" : "頭圍"
+          },
+          "subject" : {
+            "reference" : "Patient/pat-nsysu-hd-001"
+          },
+          "effectiveDateTime" : "2020-11-18T16:19:31+08:00",
+          "performer" : [{
+            "reference" : "Organization/org-nsysu"
+          }],
+          "valueQuantity" : {
+            "value" : 56.2,
+            "unit" : "cm",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "cm"
+          }
+        }'''
       
       output :observation_value
       
@@ -892,7 +956,7 @@ module InfernoTWCoreIG
       input_order :url
       
       input :observation_resource,
-            title: 'Observation Resource'
+        title: 'Observation Resource'
 
       run do 
         resource_hash = JSON.parse(observation_resource)

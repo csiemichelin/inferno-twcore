@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
@@ -22,7 +22,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_id,
-        title: 'Condition _id'
+        title: 'Condition _id',
+        default: 'con-nsysu-hd-past-1'
 
       # Named requests can be used by other tests
       makes_request :condition
@@ -43,7 +44,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
@@ -51,7 +52,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_clinicalStatus,
-        title: 'Condition clinical-status'
+        title: 'Condition clinical-status',
+        default: 'resolved'
 
       run do
         fhir_search('Condition', params: { 'clinical-status': condition_clinicalStatus })
@@ -69,7 +71,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
@@ -77,7 +79,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_code,
-        title: 'Condition code'
+        title: 'Condition code',
+        default: '140004'
 
       run do
         fhir_search('Condition', params: { code: condition_code })
@@ -95,7 +98,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
@@ -103,7 +106,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_subject,
-        title: 'Condition subject'
+        title: 'Condition subject',
+        default: 'Patient/13419'
 
       run do
         fhir_search('Condition', params: { subject: condition_subject })
@@ -121,7 +125,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
@@ -129,7 +133,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_onsetDate,
-        title: 'Condition onset-date'
+        title: 'Condition onset-date',
+        default: '2024-08-20'
 
       run do
         fhir_search('Condition', params: { 'onset-date': condition_onsetDate })
@@ -147,7 +152,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
@@ -155,7 +160,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_abatementDate,
-        title: 'Condition abatement-date'
+        title: 'Condition abatement-date',
+        default: '2024-08-27'
 
       run do
         fhir_search('Condition', params: { 'abatement-date': condition_abatementDate })
@@ -173,7 +179,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-病情、問題或診斷（TW Core Condition）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)
       )
@@ -181,7 +187,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_severity,
-        title: 'Condition severity'
+        title: 'Condition severity',
+        default: '24484000'
 
       run do
         fhir_search('Condition', params: { severity: condition_severity })
@@ -234,7 +241,78 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_resource,
-            title: 'Condition Resource'
+        title: 'Condition Resource',
+        default: '''{
+          "resourceType": "Condition",
+          "id": "14866",
+          "meta": {
+            "versionId": "1",
+            "lastUpdated": "2024-09-02T13:13:11.518+00:00",
+            "source": "#YPRbvnuq0uoegjrk",
+            "profile": [ "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore" ]
+          },
+          "clinicalStatus": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved",
+              "display": "Resolved"
+            } ],
+            "text": "解決"
+          },
+          "verificationStatus": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "unconfirmed",
+              "display": "Unconfirmed"
+            } ],
+            "text": "無生病"
+          },
+          "category": [ {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+              "code": "problem-list-item",
+              "display": "Problem List Item"
+            } ],
+            "text": "發燒生病"
+          } ],
+          "severity": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "24484000",
+              "display": "Severe"
+            } ],
+            "text": "中度"
+          },
+          "code": {
+            "coding": [ {
+              "system": "https://twcore.mohw.gov.tw/ig/twcore/ValueSet-icd-10-cm-2021-tw.html",
+              "code": "140004",
+              "display": "Chronic pharyngitis"
+            } ],
+            "text": "慢性咽喉炎"
+          },
+          "bodySite": [ {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "1075005",
+              "display": "Promonocyte"
+            } ],
+            "text": "幼單核細胞"
+          } ],
+          "subject": {
+            "reference": "Patient/13419"
+          },
+          "onsetDateTime": "2024-08-20",
+          "abatementDateTime": "2024-08-27",
+          "asserter": {
+            "reference": "Patient/13419"
+          },
+          "note": [ {
+            "authorString": "OK",
+            "time": "2024-08-12T16:38:00+08:00",
+            "text": "N.A."
+          } ]
+        }'''
       
       output :condition_value
       
@@ -261,7 +339,7 @@ module InfernoTWCoreIG
       input_order :url
 
       input :condition_resource,
-            title: 'Condition Resource'
+        title: 'Condition Resource'
 
       run do 
         resource_hash = JSON.parse(condition_resource)

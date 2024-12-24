@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-資料交換基本單位（TW Core Bundle）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Bundle-twcore.html)
         
@@ -26,7 +26,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :bundle_id,
-        title: 'Bundle _id'
+        title: 'Bundle _id',
+        default: '15784'
 
       # Named requests can be used by other tests
       makes_request :bundle
@@ -55,7 +56,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :bundle_identifier,
-            title: 'Bundle identifier'
+        title: 'Bundle identifier',
+        default: '01010905170415100000000'
 
       run do
         fhir_search('Bundle', params: { 'identifier': bundle_identifier })
@@ -86,11 +88,18 @@ module InfernoTWCoreIG
       # This test will use the response from the :bundle request in the
       # previous test
       uses_request :bundle
+      
+      output :bundle
 
       run do
         assert_response_status(200)
         assert_resource_type('Bundle')
         assert_valid_resource
+
+        # assert_valid_json(bundle) # 確認JSON有效性
+        # resource_hash = JSON.parse(bundle)
+        # tw_bundle_resource = FHIR::Bundle.new(resource_hash)
+        # assert_valid_resource(resource: tw_bundle_resource)
       end
     end
 
@@ -116,7 +125,45 @@ module InfernoTWCoreIG
       input_order :url
 
       input :bundle_resource,
-            title: 'Bundle Resource'
+        title: 'Bundle Resource',
+        default: '''{"resourceType" : "Bundle",
+          "id" : "bun-message-response-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Bundle-message-twcore"]
+          },
+          "identifier" : {
+            "system" : "https://www.tph.mohw.gov.tw",
+            "value" : "01014857930415100000000"
+          },
+          "type" : "message",
+          "timestamp" : "2023-12-02T12:34:56.000Z",
+          "entry" : [{
+            "fullUrl" : "https://twcore.mohw.gov.tw/ig/twcore/MessageHeader/mes-response-example",
+            "resource" : {
+              "resourceType" : "MessageHeader",
+              "id" : "mes-response-example",
+              "meta" : {
+                "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/MessageHeader-twcore"]
+              },
+              "text" : {
+                "status" : "generated",
+                "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3><b>訊息表頭－response</b></h3><p><b>訊息回應識別碼</b>: efdd266b-0e09-4164-883e-35cf3871715f</p><p><b>訊息回應的事件代碼</b>: Laboratory report <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://loinc.org\">LOINC</a>#11502-2)</span></p><p><b>訊息回應來源</b>: https://www.cdc.gov.tw/</p><p><b>訊息回應類型</b>: OK <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://hl7.org/fhir/response-code\">ResponseType</a>#ok)</span></p></div>"
+              },
+              "eventCoding" : {
+                "system" : "http://loinc.org",
+                "code" : "11502-2",
+                "display" : "Laboratory report"
+              },
+              "source" : {
+                "endpoint" : "https://www.cdc.gov.tw/"
+              },
+              "response" : {
+                "identifier" : "efdd266b-0e09-4164-883e-35cf3871715f",
+                "code" : "ok"
+              }
+            }
+          }]
+        }'''
       
       output :bundle_value
       
@@ -147,7 +194,7 @@ module InfernoTWCoreIG
       input_order :url
       
       input :bundle_resource,
-            title: 'Bundle Resource'
+        title: 'Bundle Resource'
 
       run do 
         resource_hash = JSON.parse(bundle_resource)

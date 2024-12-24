@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-目標（TW Core Goal）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)
       )
@@ -22,7 +22,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :goal_patient,
-        title: 'Goal patient'
+        title: 'Goal patient',
+        default: 'Patient/pat-nsysu-hd-001'
 
       # Named requests can be used by other tests
       makes_request :goal
@@ -31,7 +32,7 @@ module InfernoTWCoreIG
         fhir_search('Goal', params: { 'patient': goal_patient }, name: :goal)
 
         assert_response_status(200)
-        assert_resource_type('Goal')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -47,16 +48,18 @@ module InfernoTWCoreIG
       input_order :url
 
       input :goal_patient,
-        title: 'Goal patient'
+        title: 'Goal patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :goal_lifecycleStatus,
-        title: 'Goal lifecycleStatus'
+        title: 'Goal lifecycleStatus',
+        default: 'active'
 
       run do
         fhir_search('Goal', params: { 'patient': goal_patient, 'lifecycle-status': goal_lifecycleStatus })
 
         assert_response_status(200)
-        assert_resource_type('Goal')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -72,16 +75,18 @@ module InfernoTWCoreIG
       input_order :url
 
       input :goal_patient,
-        title: 'Goal patient'
+        title: 'Goal patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :goal_targetDate,
-        title: 'Goal targetDate'
+        title: 'Goal targetDate',
+        default: '2016-04-05'
 
       run do
         fhir_search('Goal', params: { 'patient': goal_patient, 'target-date': goal_targetDate })
 
         assert_response_status(200)
-        assert_resource_type('Goal')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -97,16 +102,18 @@ module InfernoTWCoreIG
       input_order :url
 
       input :goal_patient,
-        title: 'Goal patient'
+        title: 'Goal patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :goal_description,
-        title: 'Goal description'
+        title: 'Goal description',
+        default: 'Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs'
 
       run do
         fhir_search('Goal', params: { 'patient': goal_patient, 'description': goal_description })
 
         assert_response_status(200)
-        assert_resource_type('Goal')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -130,7 +137,7 @@ module InfernoTWCoreIG
 
       run do
         assert_response_status(200)
-        assert_resource_type('Goal')
+        assert_resource_type('Bundle')
         assert_valid_resource
       end
     end
@@ -153,7 +160,28 @@ module InfernoTWCoreIG
       input_order :url
 
       input :goal_resource,
-        title: 'Goal Resource'
+        title: 'Goal Resource',
+        default: '''{
+          "resourceType" : "Goal",
+          "id" : "goa-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Goal-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal goa-example</b></p><a name=\"goa-example\"> </a><a name=\"hcgoa-example\"> </a><a name=\"goa-example-en-US\"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>description</b>: <span title=\"Codes:\">Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs</span></p><p><b>subject</b>: <a href=\"Patient-pat-example.html\">陳加玲(official) Female, DoB: 1990-01-01 ( Medical record number\u00a0(use:\u00a0official,\u00a0))</a></p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2016-04-05</td></tr></table></div>"
+          },
+          "lifecycleStatus" : "active",
+          "description" : {
+            "text" : "Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs"
+          },
+          "subject" : {
+            "reference" : "Patient/pat-nsysu-hd-001"
+          },
+          "target" : [{
+            "dueDate" : "2016-04-05"
+          }]
+        }'''
       
       output :goal_value
       

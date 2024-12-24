@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-照護計畫（TW Core CarePlan）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)
       )
@@ -22,10 +22,12 @@ module InfernoTWCoreIG
       input_order :url
 
       input :carePlan_patient,
-        title: 'CarePlan patient'
+        title: 'CarePlan patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :carePlan_category,
-        title: 'CarePlan category'
+        title: 'CarePlan category',
+        default: 'assess-plan'
 
       # Named requests can be used by other tests
       makes_request :carePlan
@@ -34,7 +36,7 @@ module InfernoTWCoreIG
         fhir_search('CarePlan', params: { 'patient': carePlan_patient, 'category': carePlan_category }, name: :carePlan)
 
         assert_response_status(200)
-        assert_resource_type('CarePlan')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -50,19 +52,22 @@ module InfernoTWCoreIG
       input_order :url
 
       input :carePlan_patient,
-        title: 'CarePlan patient'
+        title: 'CarePlan patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :carePlan_category,
-        title: 'CarePlan category'
+        title: 'CarePlan category',
+        default: 'assess-plan'
       
       input :carePlan_date,
-        title: 'CarePlan date'
+        title: 'CarePlan date',
+        optional: true  # 將 date 設置為選填項
 
       run do
         fhir_search('CarePlan', params: { 'patient': carePlan_patient, 'category': carePlan_category, 'date': carePlan_date })
 
         assert_response_status(200)
-        assert_resource_type('CarePlan')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -78,19 +83,22 @@ module InfernoTWCoreIG
       input_order :url
 
       input :carePlan_patient,
-        title: 'CarePlan patient'
+        title: 'CarePlan patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :carePlan_category,
-        title: 'CarePlan category'
+        title: 'CarePlan category',
+        default: 'assess-plan'
       
       input :carePlan_status,
-        title: 'CarePlan status'
+        title: 'CarePlan status',
+        default: 'active'
 
       run do
         fhir_search('CarePlan', params: { 'patient': carePlan_patient, 'category': carePlan_category, 'status': carePlan_status })
 
         assert_response_status(200)
-        assert_resource_type('CarePlan')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -106,22 +114,26 @@ module InfernoTWCoreIG
       input_order :url
 
       input :carePlan_patient,
-        title: 'CarePlan patient'
+        title: 'CarePlan patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :carePlan_category,
-        title: 'CarePlan category'
+        title: 'CarePlan category',
+        default: 'assess-plan'
       
       input :carePlan_status,
-        title: 'CarePlan status'
+        title: 'CarePlan status',
+        default: 'active'
       
       input :carePlan_date,
-        title: 'CarePlan date'
+        title: 'CarePlan date',
+        optional: true  # 將 date 設置為選填項
 
       run do
         fhir_search('CarePlan', params: { 'patient': carePlan_patient, 'category': carePlan_category, 'status': carePlan_status, 'date': carePlan_date })
 
         assert_response_status(200)
-        assert_resource_type('CarePlan')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -146,7 +158,7 @@ module InfernoTWCoreIG
 
       run do
         assert_response_status(200)
-        assert_resource_type('CarePlan')
+        assert_resource_type('Bundle')
         assert_valid_resource
       end
     end
@@ -169,7 +181,29 @@ module InfernoTWCoreIG
       input_order :url
 
       input :carePlan_resource,
-        title: 'CarePlan Resource'
+        title: 'CarePlan Resource',
+        default: '''{
+          "resourceType" : "CarePlan",
+          "id" : "careplan-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CarePlan-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CarePlan careplan-example</b></p><a name=\"careplan-example\"> </a><a name=\"hccareplan-example\"> </a><a name=\"careplan-example-en-US\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw assess-plan}\">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href=\"Patient-pat-example.html\">陳加玲(official) Female, DoB: 1990-01-01 ( Medical record number\u00a0(use:\u00a0official,\u00a0))</a></p></div>"
+          },
+          "status" : "active",
+          "intent" : "order",
+          "category" : [{
+            "coding" : [{
+              "system" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/careplan-category-tw",
+              "code" : "assess-plan"
+            }]
+          }],
+          "subject" : {
+            "reference" : "Patient/pat-nsysu-hd-001"
+          }
+        }'''
       
       output :carePlan_value
       

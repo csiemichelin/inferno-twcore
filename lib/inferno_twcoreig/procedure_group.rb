@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
       )
@@ -22,7 +22,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :procedure_id,
-        title: 'Procedure _id'
+        title: 'Procedure _id',
+        default: '13401'
 
       # Named requests can be used by other tests
       makes_request :procedure
@@ -43,7 +44,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
       )
@@ -51,7 +52,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :procedure_code,
-        title: 'Procedure code'
+        title: 'Procedure code',
+        default: '0016070'
 
       run do
         fhir_search('Procedure', params: { code: procedure_code })
@@ -69,7 +71,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
       )
@@ -77,7 +79,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :procedure_status,
-        title: 'Procedure status'
+        title: 'Procedure status',
+        default: 'preparation'
 
       run do
         fhir_search('Procedure', params: { status: procedure_status })
@@ -95,7 +98,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
       )
@@ -103,7 +106,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :procedure_subject,
-        title: 'Procedure subject'
+        title: 'Procedure subject',
+        default: 'Patient/13384'
 
       run do
         fhir_search('Procedure', params: { subject: procedure_subject })
@@ -121,7 +125,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-處置或手術（TW Core Procedure）](https://twcore.mohw.gov.tw/ig/twcore/0.2.1/StructureDefinition-Procedure-twcore.html)
       )
@@ -129,7 +133,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :procedure_date,
-        title: 'Procedure date'
+        title: 'Procedure date',
+        default: 'gt2022-08-11'
 
       run do
         fhir_search('Procedure', params: { date: procedure_date })
@@ -182,7 +187,46 @@ module InfernoTWCoreIG
       input_order :url
 
       input :procedure_resource,
-            title: 'Procedure Resource'
+        title: 'Procedure Resource',
+        default: '''{
+          "resourceType" : "Procedure",
+          "id" : "pro-appendectomy-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Procedure-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3><b>處置或手術基本資料</b></h3><p><b>處置或手術狀態</b>：completed</p><p><b>處置或手術的識別碼</b>：闌尾切除術(Appendectomy) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://snomed.info/sct\">SNOMED CT</a>#80146002)</span></p><p><b>病人</b>：<a href=\"Patient-pat-example.html\">Patient/pat-example</a> \"陳加玲\"</p><p><b>執行時間</b>：2023-11-10T14:00:00</p><p><b>處置或手術的結果識別碼</b>：闌尾成功切除(Appendix absent) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://snomed.info/sct\">SNOMED CT</a>#300309008)</span></p><p><b>追蹤說明識別碼</b>： Bone immobilization <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://snomed.info/sct\">SNOMED CT</a>#274474001)</span></p></div>"
+          },
+          "status" : "completed",
+          "code" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "80146002",
+              "display" : "Appendectomy"
+            }],
+            "text" : "闌尾切除術"
+          },
+          "subject" : {
+            "reference" : "Patient/pat-nsysu-hd-001"
+          },
+          "performedDateTime" : "2023-11-10T14:00:00Z",
+          "outcome" : {
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "300309008",
+              "display" : "Appendix absent"
+            }],
+            "text" : "闌尾成功切除"
+          },
+          "followUp" : [{
+            "coding" : [{
+              "system" : "http://snomed.info/sct",
+              "code" : "274474001",
+              "display" : "Bone immobilization"
+            }]
+          }]
+        }'''
       
       output :procedure_value
       
@@ -209,7 +253,7 @@ module InfernoTWCoreIG
       input_order :url
       
       input :procedure_resource,
-            title: 'Procedure Resource'
+        title: 'Procedure Resource'
 
       run do 
         resource_hash = JSON.parse(procedure_resource)

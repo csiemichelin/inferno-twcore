@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-出處（TW Core Provenance）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Provenance-twcore.html)
       )
@@ -22,10 +22,12 @@ module InfernoTWCoreIG
       input_order :url
 
       input :provenance_patient,
-        title: 'Provenance patient'
+        title: 'Provenance patient',
+        default: 'Patient/pat-nsysu-hd-001'
       
       input :provenance_revinclude,
-        title: 'Provenance _revinclude'
+        title: 'Provenance _revinclude',
+        default: 'Provenance:target'
 
       # Named requests can be used by other tests
       makes_request :provenance
@@ -34,7 +36,7 @@ module InfernoTWCoreIG
         fhir_search('Provenance', params: { 'patient': provenance_patient, '_revinclude': provenance_revinclude }, name: :provenance)
 
         assert_response_status(200)
-        assert_resource_type('Provenance')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -50,16 +52,18 @@ module InfernoTWCoreIG
       input_order :url
 
       input :provenance_id,
-        title: 'Provenance _id'
+        title: 'Provenance _id',
+        default: '15923'
       
       input :provenance_revinclude,
-        title: 'Provenance _revinclude'
+        title: 'Provenance _revinclude',
+        default: 'Provenance:target'
 
       run do
         fhir_search('Provenance', params: { '_id': provenance_id, '_revinclude': provenance_revinclude })
 
         assert_response_status(200)
-        assert_resource_type('Provenance')
+        assert_resource_type('Bundle')
       end
     end
 
@@ -84,7 +88,7 @@ module InfernoTWCoreIG
 
       run do
         assert_response_status(200)
-        assert_resource_type('Provenance')
+        assert_resource_type('Bundle')
         assert_valid_resource
       end
     end
@@ -107,7 +111,44 @@ module InfernoTWCoreIG
       input_order :url
 
       input :provenance_resource,
-        title: 'Provenance Resource'
+        title: 'Provenance Resource',
+        default: '''{
+          "resourceType" : "Provenance",
+          "id" : "pov-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Provenance-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance pov-example</b></p><a name=\"pov-example\"> </a><a name=\"hcpov-example\"> </a><a name=\"pov-example-en-US\"> </a><p>Provenance for <a href=\"Patient-pat-example.html\">陳加玲(official) Female, DoB: 1990-01-01 ( Medical record number\u00a0(use:\u00a0official,\u00a0))</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2023-02-28 15:26:23+0000</td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type informant}\">Informant</span></td><td><a href=\"Patient-pat-example.html\">陳加玲(official) Female, DoB: 1990-01-01 ( Medical record number\u00a0(use:\u00a0official,\u00a0))</a></td></tr></table></div>"
+          },
+          "target" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/targetElement",
+              "valueUri" : "race"
+            }],
+            "reference" : "Patient/pat-nsysu-hd-001"
+          }],
+          "recorded" : "2023-02-28T15:26:23.217+00:00",
+          "agent" : [{
+            "type" : {
+              "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                "code" : "informant",
+                "display" : "Informant"
+              }]
+            },
+            "who" : {
+              "reference" : "Patient/pat-nsysu-hd-001"
+            }
+          }],
+          "entity" : [{
+            "role" : "source",
+            "what" : {
+              "display" : "admission form"
+            }
+          }]
+        }'''
       
       output :provenance_value
       

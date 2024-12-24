@@ -14,7 +14,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
 
@@ -28,7 +28,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :organization_id,
-        title: 'Organization _id'
+        title: 'Organization _id',
+        default: 'org-hosp-example'
 
       # Named requests can be used by other tests
       makes_request :organization
@@ -49,7 +50,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
 
@@ -63,7 +64,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :organization_identifier,
-        title: 'Organization identifier'
+        title: 'Organization identifier',
+        default: '0131060029'
 
       run do
         fhir_search('Organization', params: { identifier: organization_identifier })
@@ -81,7 +83,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
 
@@ -95,7 +97,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :organization_name,
-        title: 'Organization name'
+        title: 'Organization name',
+        default: '衛生福利部臺北醫院'
 
       run do
         fhir_search('Organization', params: { name: organization_name })
@@ -113,7 +116,7 @@ module InfernoTWCoreIG
 
         Because this is the first search of the sequence, resources in the response will be used for subsequent tests.
 
-        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.0.
+        Additionally, this test will check that GET and POST search methods return the same number of results. Search by POST is required by the FHIR R4 specification, and these tests interpret search by GET as a requirement of TW Core v0.3.1.
 
         [臺灣核心-機構（TW Core Organization）](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)
 
@@ -127,7 +130,8 @@ module InfernoTWCoreIG
       input_order :url
 
       input :organization_type,
-        title: 'Organization type'
+        title: 'Organization type',
+        default: 'prov'
 
       run do
         fhir_search('Organization', params: { type: organization_type })
@@ -192,7 +196,40 @@ module InfernoTWCoreIG
       input_order :url
 
       input :organization_resource,
-            title: 'Organization Resource'
+        title: 'Organization Resource',
+        default: '''{
+          "resourceType" : "Organization",
+          "id" : "org-co-example",
+          "meta" : {
+            "profile" : ["https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-co-twcore"]
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3><b>公司行號基本資料</b></h3><p><b>機構名稱</b>：莉梓股份有限公司</p><p><b>識別碼型別</b>：Unified Business number<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"CodeSystem-v2-0203.html\">臺灣識別碼類型值集</a>#UBN）</span><br/><b>公司或企業統一編號（official）</b>：06100268 (https://gcis.nat.gov.tw)</p><p><b>機構種類</b>：Non-Healthcare Business or Corporation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">（ <a href=\"http://hl7.org/fhir/R4/codesystem-organization-type.html\">OrganizationType</a>#bus）</span></p><p><b>聯絡方式</b>：Email<span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> （ <a href=\"https://hl7.org/fhir/R4/valueset-contact-point-system.html\">ContactPointSystem</a>#email）</span><br/><b>聯絡信箱</b>：litzu@qmail.com</p></div>"
+          },
+          "identifier" : [{
+            "use" : "official",
+            "type" : {
+              "coding" : [{
+                "system" : "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/v2-0203",
+                "code" : "UBN"
+              }]
+            },
+            "system" : "https://gcis.nat.gov.tw",
+            "value" : "06100268"
+          }],
+          "type" : [{
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+              "code" : "bus"
+            }]
+          }],
+          "name" : "莉梓股份有限公司",
+          "telecom" : [{
+            "system" : "email",
+            "value" : "litzu@qmail.com"
+          }]
+        }'''
       
       output :organization_value
       
@@ -225,7 +262,7 @@ module InfernoTWCoreIG
       input_order :url
 
       input :organization_resource,
-            title: 'Organization Resource'
+        title: 'Organization Resource'
 
       run do 
         resource_hash = JSON.parse(organization_resource)

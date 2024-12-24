@@ -34,12 +34,13 @@ require_relative 'inferno_twcoreig/specimen_group'
 module InfernoTWCoreIG
   class Suite < Inferno::TestSuite
     id :inferno_twcoreig_test_suite
-    title 'TW Core v0.3.0'
+    title 'TW Core v0.3.1'
     description 'TW Core FHIR API'
 
     # These inputs will be available to all tests in this suite
     input :url,
-      title: 'FHIR Server Base Url'
+      title: 'FHIR Server Base Url',
+      default: 'https://twcore.hapi.fhir.tw/fhir/'
 
     # input :credentials,
     #       title: 'OAuth Credentials',
@@ -49,7 +50,7 @@ module InfernoTWCoreIG
     # All FHIR requests in this suite will use this FHIR client
     fhir_client do
       url :url
-      oauth_credentials :credentials
+      # oauth_credentials :credentials
     end
 
     # All FHIR validation requsets will use this FHIR validator
